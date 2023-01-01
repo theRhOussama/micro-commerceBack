@@ -14,7 +14,6 @@ import java.util.List;
 @NoArgsConstructor
 @Data
 @Builder
-
 public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -22,5 +21,6 @@ public class Order {
     private  String orderNumber;
     @OneToMany(cascade = CascadeType.ALL)
     private List<OrderLineItems> orderLineItemsList;
+
 
 }
